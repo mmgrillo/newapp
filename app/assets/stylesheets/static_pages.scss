@@ -2,8 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+$primary-color: #6F1A37;
+
 h1 {
 	font-family: Garamond, sans-serif;
 	text-alignment: center;
-	color: grey
+	color: $primary-color;
 }
+
