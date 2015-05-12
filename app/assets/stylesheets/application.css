@@ -12,19 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ *= require_navbar
+ *= require_products
  */
 
-$primary-color: #6F1A37;
-
-.navbar-inverse {
-	background-color: $primary-color;
-}
-
-.defesa-icon {
-	width: 210px;
-	margin: auto;
-	float: left;
-}
 
 .welcome {
 	margin-top: 80px;
