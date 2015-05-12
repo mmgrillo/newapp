@@ -1,22 +1,27 @@
 <p id="notice"><%= notice %></p>
 
 
-<div class="col-md-3" id="products">
+<div class="col-md-3">
   <div class="thumbnail">
     <% @products.each do |product| %>
-        <%= product.image_url %>
-    <div class="caption">      
+      <%= product.image_url %>
+    <% end %>
+  <div class="caption">      
         <p><%= product.name %></p>
         <p><%= product.description %></p>
-        <p><%= link_to 'Show', product %></p>
-        <p><%= link_to 'Edit', edit_product_path(product) %></p>
-        <p><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-    <% end %>
+          <div class="row">
+            <div class="col-md-4">
+              <button><%= link_to 'Show', product %></button>
+            </div>
+            <div class="col-md-4">
+              <button><%= link_to 'Edit', edit_product_path(product) %></button>
+            </div>
+            <div class="col-md-4">
+              <button><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </button>
+          </div>
     </div>
   </div>
+<%= link_to 'New Product', new_product_path %>
 </div>
   
-
-<br>
-
-<%= link_to 'New Product', new_product_path %>
