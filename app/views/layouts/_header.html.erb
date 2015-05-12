@@ -12,13 +12,14 @@
       </div>
         <div class="navbar-collapse collapse" id="scrollspy">
           <div class="defesa-icon">
-             <a href="#"><img src="/images/defesa-logo.png" alt="Defesa Logo"></a>
+            <%= link_to image_tag('/images/defesa-logo.png'), root_path %>
           </div>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">About Us</a></li>
+            <li><%= link_to 'About Us', static_pages_about_path %></li>
             <li><a href="#">Where we are</a></li>
-            <li><a href="#">Our Products</a></li>
+            <li><%= link_to 'Our Products', products_path %></li>
             <li><a href="#">Import</a></li>
+            <li><%= link_to 'Contacts', static_pages_contact_path %></li>
           </ul>
         </div>
     </div>
