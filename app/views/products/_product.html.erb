@@ -4,8 +4,9 @@
 <div class="col-md-3">
   <div class="thumbnail">
     <% @products.each do |product| %>
-      <%= image_tag(product.image_url, class: 'product_image') %>
     <% end %>
+    <%= image_tag(product.image_url, class: 'product_image') %>
+
   <div class="caption">      
         <p><%= product.name %></p>
         <p><%= product.description %></p>
@@ -24,6 +25,9 @@
         </div>
     </div>
   </div>
+ </div>
+
+ <br>
 <%= link_to 'New Product', new_product_path %>
-</div>
+
   
