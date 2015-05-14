@@ -1,21 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 
-<div class="col-md-3">
+<div class="col-md-4 col-xs-12">
   <div class="thumbnail">
-   <%= image_tag(product.image_url, class: 'product_image', width: 200, height: 100 ) %>
+   <%= image_tag(product.image_url,  width: 200, height: 120, class: 'product_image' ) %>
   <div class="caption">      
         <p><%= product.name %></p>
         <p><%= product.description %></p>
         <p><%= product.key %></p>
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
               <button><%= link_to 'Show', product %></button>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
               <button><%= link_to 'Edit', edit_product_path(product) %></button>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
               <button><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
             </button>
           </div>

@@ -7,6 +7,8 @@ $primary-color: #6F1A37;
 
 .thumbnail {
 	background-color: $primary-color;
+	height: 250px;
+  width: 250px;
 }
 
 p {
@@ -16,3 +18,21 @@ p {
 #new-product {
 	margin-left: 20px;
 }
+
+
+.thumbnail img {
+  height: 120px;
+}
+
+#new-product-button {
+	display: table;
+  margin: 0 auto;
+  background-color: red;
+}
+
+#new-product-button a {
+	color: white;
+	text-size: 2em;
+	text-decoration: none;
+}
+
