@@ -1,0 +1,14 @@
+<h2 class="text-center"> Featured Product:</h2>
+<%= @featured_product.name %>
+
+<div class = "container-fluid">
+	<div class="thumbnail">
+	   <%= image_tag(@featured_product.image_url,  width: 200, height: 120, class: 'product_image' ) %>
+	    <div class="caption">      
+	        <p><%= @featured_product.name %></p>
+	        <p><%= @featured_product.description %></p>
+	        <p><%= @featured_product.key %></p>
+	        <p>€<%= @featured_product.price %></p>  
+	    </div>
+	  </div>
+</div>
