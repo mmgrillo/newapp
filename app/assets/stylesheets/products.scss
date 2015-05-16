@@ -6,9 +6,11 @@
 $primary-color: #6F1A37;
 
 .thumbnail {
+	border: 1px £primary-color;
+}
+
+.caption {
 	background-color: $primary-color;
-	height: 250px;
-  width: 250px;
 }
 
 p {
