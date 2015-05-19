@@ -41,6 +41,15 @@ p {
 .field {
 	display: table;
 	margin: 0 auto;
+	font-size: 1.3em;
+}
+
+.form_button {
+	display: table;
+	margin: 0 auto;
+	font-size: 1.3em;
+	background-color: $primary-color;
+	color: white;
 }
 
 #new-product-title {

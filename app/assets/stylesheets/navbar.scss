@@ -9,3 +9,15 @@ $primary-color: #6F1A37;
 	margin: auto;
 	float: left;
 }
+
+#search-box {
+	margin-top: 12px;
+	margin-right: 12px;
+}
+
+.search-button {
+	width: 3em;
+	margin-right: 10px;
+	background-color: $primary-color;
+	color: white;
+}
