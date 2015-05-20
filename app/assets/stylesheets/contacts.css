@@ -1,0 +1,27 @@
+
+.contact-form {
+	position: relative;
+	margin-left: 10%;
+}
+
+.contact-image {
+	margin-left: 10%;
+	margin-top: 40px;
+}
+
+#contacts {
+	margin-left: 137px;
+}
+
+#contact-button {
+	margin-left: 320px;
+}
+
+#thank-you {
+	background-color: #6F1A37;
+	width: 400px;
+	margin-left: 340px;
+	margin-top: 100px;
+	font-size: 1.4em;
+	line-height: 30px;
+}

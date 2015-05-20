@@ -1,3 +1,37 @@
-<h1>StaticPages#contact</h1>
-<p>Find me in app/views/static_pages/contact.html.erb</p>
+
+<div class="row">
+
+ <div class="col-md-4 contact-image">
+    <%= image_tag("/images/contact-cow.jpg", size: "450x338") %>
+  </div>
+
+  <div class="col-md-4" id="contacts">
+    <h1 class="contact-form">Contact Us</h1>
+
+    <%= flash[:notice] %>
+
+    <%= form_tag("/static_pages/thank_you") do %>
+		<br>
+
+		<div class="form-group contact-form">
+	    <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+		</div>		
+		<br>
+		<div class="form-group contact-form">
+			<%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+		</div>
+		<br>
+		<div class="form-group contact-form">
+			<%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+		</div>		
+
+
+		<br>
+		<div class="contact-form" id="contact-button">
+		<%= submit_tag "Send" %>  
+		</div> 
+		<% end %>
+  </div>
+   
+</div> 
 
