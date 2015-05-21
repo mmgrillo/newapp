@@ -6,12 +6,12 @@ Rails.application.configure do
   :port           => '587',
   :authentication => :plain,
   :user_name      => ENV['app36620669@heroku.com'],
-  :password       => ENV['eqzzyvqa4329'],
+  :password       => ENV['Benfica10'],
   :domain         => 'heroku.com',
   :enable_starttls_auto => true
 }
 
-  
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
