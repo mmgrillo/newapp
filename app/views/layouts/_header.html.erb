@@ -18,6 +18,11 @@
             <li><%= link_to 'About Us', static_pages_about_path %></li>
             <li><%= link_to 'Our Products', products_path %></li>
             <li><%= link_to 'Contacts', static_pages_contact_path %></li>
+          <% if user_signed_in? %>
+            <li> <%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+          <% else %>
+            <li> <%= link_to('Login', new_user_session_path) %></li>
+          <% end %>
             <li id="search-box"><%= form_tag("/products", method: "get") do %>
                 <%= text_field_tag :q, nil, size: 17, placeholder: 'Search here...' %>
                 <% end %></li>

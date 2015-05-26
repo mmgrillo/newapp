@@ -3,7 +3,8 @@ class ProductsController < ApplicationController
 
   # GET /products
   # GET /products.json
-  
+  before_filter :authenticate_user!
+
   def index
     if params[:q]
       search_term = params[:q]
