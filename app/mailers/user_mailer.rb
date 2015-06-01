@@ -1,11 +1,10 @@
 class UserMailer < ApplicationMailer
-	default from: "manuel@monte-defesa.com"
 	
-	def contact_form(email, name, message)
-		@message = message
-		mail(:from => email,
-					:to => 'mmgrillo1@gmail.com',
-					:subject => "A new contact form message from #{name}")
+	def say_thank_you(email, name, message)
+		@message = message # e.g. "I want to buy something"
+		@name = name
+		mail(:to => email,
+				 :subject => "Thanks for contacting us")
 	end
 
 	def welcome_email(user)
