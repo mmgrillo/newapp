@@ -19,3 +19,97 @@ h1 {
   text-align: center;	
 }
 
+.top-page {
+	margin-top: 100px;
+}
+
+.white-space {
+	height: 600px
+}
+
+/* container-footer */
+
+.container-footer {
+	width: 100%;
+	padding: 0px 50px 0px;
+	background-color: $primary-color;
+}
+
+
+.row-footer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	padding-left: 3em;
+	margin-top: 30px;
+}
+
+@media (max-width: 400px) {
+ .container-footer {
+	width: 100%;
+	padding: 0px 10px 0px;
+ }
+ .row-footer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	padding-left: 4em;
+	margin-top: 30px;
+ }
+}
+
+ .footerdiv {
+ 	margin-top: 20px;
+ 	width: 60%;
+ }
+
+.row-copyright {
+	border-top: 1px solid grey;
+	margin: 10px 30px 0px;
+}
+
+#bottom-logo {
+	text-align: center;
+	margin-top: 20px;
+}
+
+#services > li {
+	color: white;
+}
+
+#morada > li {
+	color: white;
+}
+
+@media (max-width: 400px){
+	p#contacts {
+		margin-left: -60em;
+		width: 80%;
+		text-align: none;
+		margin-left: -30em;
+	}
+}
+
+#services {
+	list-style: none;
+	text-align: left;
+	padding-left: 0;
+	width: 80%;
+}
+
+#services li {
+	margin-bottom: 10px;
+	border-bottom: 1px dotted grey;
+}
+
+#morada {
+	list-style: none;
+	text-align: left;
+	padding-left: 0;
+}
+
+#footer {
+	color: white;
+}
+
+/* /container-footer */

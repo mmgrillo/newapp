@@ -14,15 +14,17 @@
 </head>
 <body>
 
-
+<div class="container">
 <%= render "layouts/header" %>
-
-<div class ="container welcome">
-<h1> Welcome to Monte da Defesa </h1>
-<h2> Your source for grass fed beef </h1>
 </div>
+<%= render "layouts/messages" %>
 
 <%= yield %>
+
+<div class="container white-space">
+</div>
+
+<%= render "layouts/footer" %>
 
 </body>
 </html>

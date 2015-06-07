@@ -14,7 +14,7 @@ class StaticPagesController < ApplicationController
     UserMailer.say_thank_you(@email, @name, @message).deliver
 
     ActionMailer::Base.mail(:from => @email, 
-      :to => 'manel@dddd.com', 
+      :to => 'manuel@monte-defesa.com', 
       :subject => "A new contact form message from #{@name}", 
       :body => @message).deliver
   end
