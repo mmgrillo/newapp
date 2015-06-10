@@ -8,4 +8,5 @@ class Product < ActiveRecord::Base
 		message: 'must be a URL for GIF, JPG, or PNG image.'
 	}
 	has_many :orders
+	has_many :comments
 end
