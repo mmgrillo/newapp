@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+ <head>
   <title>Newapp</title>
 
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
@@ -11,20 +11,27 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   
-</head>
-<body>
+ </head>
+ <body>
 
-<div class="container">
-<%= render "layouts/header" %>
-</div>
-<%= render "layouts/messages" %>
+	<div class="maincontainer">
+			<div class="container">
+				<%= render "layouts/header" %>
+			</div>
 
-<%= yield %>
+			<div class="container">
+			<%= render "layouts/messages" %>
+			<%= yield %>
+			</div>
 
-<div class="container white-space">
-</div>
 
-<%= render "layouts/footer" %>
 
-</body>
+			<div class="container white-space">
+			</div>
+			<footer>
+				<%= render "layouts/footer" %>
+			</footer>
+	</div>
+
+ </body>
 </html>

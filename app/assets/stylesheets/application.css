@@ -16,10 +16,13 @@
  *= require_products
  *= require_contacts
  *= require_users
+ *= require_devise
+
  */
 
 
 .welcome {
 	margin-top: 80px;
 }
+
 
