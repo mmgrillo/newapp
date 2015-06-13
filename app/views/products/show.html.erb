@@ -5,29 +5,30 @@
   <h3 class="text-center loginstuff" style="color:white"><%= @product.name %></h3>
 
 
-<p class="text-center">
+<p class="text-center" style="color:white">
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
 
-<p class="text-center">
+<p class="text-center" style="color:white">
    <%= image_tag(@product.image_url, width: 200, height: 120, class: 'product_image' ) %>
 </p>
 
-<p class="text-center">
+<p class="text-center" style="color:white">
   <strong>Product Key:</strong>
   <%= @product.key %>
 </p>
 
-<p class="text-center"> 
+<p class="text-center" style="color:white"> 
   <strong>Product Price:</strong>
   <%= @product.price %>
 </p>
 
-<p class="text-center">
+<p class="text-center" style="color:white">
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
 </p>
+<p style="color:white">Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 </div>
 
 

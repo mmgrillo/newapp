@@ -7,7 +7,6 @@ class CommentsController < ApplicationController
     @comment.save
     redirect_to products_path(@product)
   end
-  end
 
   def destroy
   end
