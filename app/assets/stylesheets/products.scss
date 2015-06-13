@@ -13,9 +13,6 @@ $primary-color: #6F1A37;
 	background-color: $primary-color;
 }
 
-#white p {
-	color: white;
-}
 
 #new-product {
 	margin-left: 20px;
@@ -55,5 +52,9 @@ $primary-color: #6F1A37;
 #new-product-title {
 	display: table;
 	margin: 0 auto;
+}
+
+.containercomments {
+	text-align: center;
 }
 
