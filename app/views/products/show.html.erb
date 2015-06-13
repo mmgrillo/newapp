@@ -1,29 +1,35 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="container containerdevise">
 
-<p>
+  <h3 class="text-center loginstuff" style="color:white"><%= @product.name %></h3>
+
+
+<p class="text-center">
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
 
-<p>
-  <strong>Image url:</strong>
-       <%= image_tag(@product.image_url, width: 200, height: 120, class: 'product_image' ) %>
+<p class="text-center">
+   <%= image_tag(@product.image_url, width: 200, height: 120, class: 'product_image' ) %>
 </p>
 
-<p>
+<p class="text-center">
   <strong>Product Key:</strong>
   <%= @product.key %>
 </p>
 
-<p>
+<p class="text-center"> 
   <strong>Product Price:</strong>
   <%= @product.price %>
 </p>
 
+<p class="text-center">
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+</p>
+</div>
+
+
+<%= render "products/new_comment" %>
+<%= render "products/product_reviews" %>
