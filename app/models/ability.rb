@@ -5,6 +5,11 @@ class Ability
     user ||= User.new
     can :manage, User, id: user.id
     end
+    if user.admin?
+      can :destroy, Comment
+    else
+      can :read, Comment
+    end
   end
 
 # Define abilities for the passed in user here. For example:
