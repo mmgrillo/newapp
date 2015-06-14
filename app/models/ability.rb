@@ -5,6 +5,8 @@ class Ability
     user ||= User.new
     can :manage, User, id: user.id
     end
+    
+    user ||= User.new
     if user.admin?
       can :destroy, Comment
     else
