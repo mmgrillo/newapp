@@ -1,18 +1,35 @@
-$primary-color: #6F1A37;
+$primary-color: #97ac9e;
+
+.nav {
+	float: left!important;
+}
 
 .navbar-inverse {
-	background-color: $primary-color;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.navbar .nav > li > a {
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    color:  #97ac9e;
+    font-weight: 900;
+}
+
+.navbar .nav > li > a:hover {
+    color:  black;
 }
 
 .defesa-icon {
 	width: 210px;
 	margin: auto;
-	float: left;
+	padding-top: 10px;
 }
 
 #search-box {
 	margin-top: 12px;
 	margin-right: 12px;
+	float:right;
 }
 
 .search-button {
@@ -21,3 +38,80 @@ $primary-color: #6F1A37;
 	background-color: $primary-color;
 	color: white;
 }
+
+.top_container {
+	width: 100%;
+	margin-top: 0px;
+	height: 85px;
+	background-color: transparent;
+}
+
+#navbar_header {
+  position: absolute;
+  top: 65px;
+}
+
+#top_buttons {
+	width: 170px;
+	height: 40px;
+	margin-right: 70px;
+	float: right;
+	margin-top: -45px;
+}
+
+#top_buttons li {
+	list-style-type: none;
+}
+
+#top_buttons li a {
+  color: $primary-color;
+  font-weight: 900;
+}
+
+#top_buttons li a:hover {
+	background-color: $primary-color;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.hello {
+	position: absolute;
+	font-size: 1.2em;
+}
+
+#sign_button {
+	font-size: 1.2em;
+	position: relative;
+	float: right;
+	margin-left: 10px;
+}
+
+.fixed {
+  position:fixed;
+  top:0;
+  width: 100%;
+  margin-top: -65px;
+  z-index: 1;
+	background-color: $primary-color;
+	border-color: $primary-color;
+}
+
+.fixed-text {
+  background-color: $primary-color;
+	border-color: $primary-color;	
+	color: white;
+	z-index: 1;
+}
+
+.fixedtext {
+  color: white !important;
+	z-index: 1;	
+}
+
+#entry-text {
+	color: black;
+	font-weight: 900;
+	font-size: 3em;
+}
+

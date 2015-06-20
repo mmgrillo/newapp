@@ -17,6 +17,7 @@
  *= require_contacts
  *= require_users
  *= require_devise
+ *= require_layouts
 
  */
 
@@ -25,8 +26,5 @@
 	margin-top: 80px;
 }
 
-.containerbody {
-	margin-top: 100px;
-}
 
 
