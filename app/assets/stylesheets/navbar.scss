@@ -24,6 +24,7 @@ $primary-color: #97ac9e;
 	width: 210px;
 	margin: auto;
 	padding-top: 10px;
+	margin-right: 43em;
 }
 
 #search-box {
@@ -42,7 +43,7 @@ $primary-color: #97ac9e;
 .top_container {
 	width: 100%;
 	margin-top: 0px;
-	height: 85px;
+	height: 100px;
 	background-color: transparent;
 }
 
@@ -113,5 +114,9 @@ $primary-color: #97ac9e;
 	color: black;
 	font-weight: 900;
 	font-size: 3em;
+}
+
+#fixed-menu-logo {
+	z-index: -1000px;
 }
 
