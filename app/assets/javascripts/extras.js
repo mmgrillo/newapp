@@ -31,3 +31,11 @@ $(window).bind('scroll', function () {
         $('.menutext').removeClass('fixedtext');
     }
 });
+
+$(window).bind('scroll', function () {
+    if ($(window).scrollTop() < 65) {
+        $('.nav').css("margin-top", "3em");
+    } else {
+        $('.nav').css("margin-top", "0px");
+    }
+});

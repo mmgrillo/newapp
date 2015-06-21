@@ -24,11 +24,11 @@ $primary-color: #97ac9e;
 	width: 210px;
 	margin: auto;
 	padding-top: 10px;
-	margin-right: 43em;
+	margin-left: 6em;
 }
 
 #search-box {
-	margin-top: 12px;
+	margin-top: -20px;
 	margin-right: 12px;
 	float:right;
 }
@@ -118,5 +118,9 @@ $primary-color: #97ac9e;
 
 #fixed-menu-logo {
 	z-index: -1000px;
+}
+
+#startnav {
+	margin-top: 3em;
 }
 
