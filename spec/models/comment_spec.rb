@@ -15,10 +15,14 @@ require "rails_helper"
    comment.valid?
    expect(comment.errors[:product]).to include("can't be blank")
    end
-  end
+ end
 
-   describe '#orders' do
-    it 'can have orders' do
-      expect(subject).to respond_to(:orders)
-    end  
+ describe Comment, 'validation' do
+    it { should validate_presence_of(:user) }
+    it { should validate_presence_of(:product) }
+  end 
+
+ describe Comment, 'association' do
+    it { should belong_to(:user) }
+    it { should belong_to(:product) }
   end
