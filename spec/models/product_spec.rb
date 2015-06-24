@@ -15,9 +15,7 @@ describe Product do
     end
     
     context 'when present' do
-      subject {
-        Product.new(name: 'Apple iPhone')
-      }
+      subject { build(:product) }
       before do
         expect(subject.name).to be_present
       end 
@@ -57,38 +55,19 @@ describe Product do
     it 'can have orders' do
       expect(subject).to respond_to(:orders)
     end  
+  end 
+
+   describe '#comments' do
+    it 'can have comments' do
+      expect(subject).to respond_to(:comments)
+    end  
   end  
  
 
-  # context "has a name" do
-  # 	before { @product = Product.new(name: "Angus Beef") }
+   describe Product, 'validation' do
+    it { should validate_uniqueness_of(:key) }
+    it { should validate_uniqueness_of(:name) }
+    it { should validate_presence_of(:key) }
+  end 
 
-  # 	it "should return name" do
-  # 	  expect(@product.name).to eq "Angus Beef"
-  # 	end
-  # end
-
-  # context "has a price" do 
-  #   before { @product = Product.new(price: 20.0) }
-
-  #   it "should return price only" do
-  #     expect(@product.price).to eq 20.0
-  #   end
-  # end
-
-  # #validates uniqueness
-  # before do
-  # 	@product = Product.new(name: "Carrot")
-  # end
-
-  # describe "when product name is already taken" do
-  # 	before do
-  # 		another_product = @product.dup
-  # 		another_product.save
-  # 	end
-
-  # 	subject {@product}
-  # 	it {should_not be_valid} do
-  # 	end
-  # end  
 end

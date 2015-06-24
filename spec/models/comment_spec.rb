@@ -16,3 +16,9 @@ require "rails_helper"
    expect(comment.errors[:product]).to include("can't be blank")
    end
   end
+
+   describe '#orders' do
+    it 'can have orders' do
+      expect(subject).to respond_to(:orders)
+    end  
+  end
