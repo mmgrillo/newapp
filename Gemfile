@@ -56,4 +56,10 @@ group :development, :test do
   gem 'spring'
 
   gem 'quiet_assets'
+
+  gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+  gem 'shoulda-matchers', require: false
 end

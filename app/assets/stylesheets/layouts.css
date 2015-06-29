@@ -1,0 +1,47 @@
+.containerbody {
+	margin-top: 39px;
+}
+
+.container-top {
+	height: 400px;
+	position: absolute;
+	width: 100%;
+}
+
+.productgrid {
+	width: 300px;
+	height: 300px;
+	float: right;
+}
+
+.top-page {
+	margin-top: 100px;
+}
+
+.white-space {
+	height: 350px;
+	position: relative;
+	margin-top: 40px;
+}
+
+#landingbanner p {
+	color: black;
+	font-size: 3em;
+}
+
+#family-image {
+	float: right;
+}
+
+#landing-image {
+	top: 0;
+}
+ .landing-slider {
+ 	margin-top: -139px;
+ 	z-index: -1;
+ }
+
+#landing-image img {
+	width: 100%;
+}
+

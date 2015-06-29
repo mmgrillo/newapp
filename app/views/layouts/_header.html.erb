@@ -1,5 +1,20 @@
 
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"> <!--navbar-->
+  <div class="top_container">
+    <div class="defesa-icon">
+      <%= link_to image_tag('/images/defesa-logo2.png'), root_path %>
+    </div>
+    <ul id="top_buttons">
+    <% if user_signed_in? %>
+    <li> <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: 'hello') %></li>
+    <% else %>
+    <li> <%= link_to('Login', new_user_session_path, class: 'hello') %></li>
+    <% end %>
+    <li> <%= link_to('Sign up', new_user_registration_path, id:'sign_button') %></li>
+  </ul>
+  </div>
+
+<div class="fixedmenu">
+ <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="navbar_header"> <!--navbar-->
     <div class="container-fluid">
       <div class="navbar-header anchor" id="#home">
         <button type="button" class="navbar-toggle" data-toggle="collapse" 
@@ -11,22 +26,26 @@
        </button>
       </div>
         <div class="navbar-collapse collapse" id="scrollspy">
-          <div class="defesa-icon">
-            <%= link_to image_tag('/images/defesa-logo.png'), root_path %>
-          </div>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to 'About Us', static_pages_about_path %></li>
-            <li><%= link_to 'Our Products', products_path %></li>
-            <li><%= link_to 'Contacts', static_pages_contact_path %></li>
+          
+          <ul class="nav navbar-nav navbar-right" id="startnav">
+            <li><%= link_to 'ABOUT US', static_pages_about_path, class: "menutext" %></li>
+            <li><%= link_to 'OUR PRODUCTS', products_path, class: "menutext" %></li>
+            <li><%= link_to 'CONTACTS', static_pages_contact_path, class: "menutext" %></li>
           <% if user_signed_in? %>
-            <li> <%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+            <li> <%= link_to('LOGOUT', destroy_user_session_path, :method => :delete, class: "menutext") %></li>
           <% else %>
-            <li> <%= link_to('Login', new_user_session_path) %></li>
+            <li> <%= link_to('LOGIN', new_user_session_path, class: "menutext") %></li>
           <% end %>
-            <li id="search-box"><%= form_tag("/products", method: "get") do %>
-                <%= text_field_tag :q, nil, size: 17, placeholder: 'Search here...' %>
-                <% end %></li>
           </ul>
+          <div id="fixed-logo"><%= link_to image_tag('/images/defesa-logo-fixed.png'), root_path, id:'fixed-menu-logo' %></div>
+
+          <div id="search-box"><%= form_tag("/products", method: "get") do %>
+                <%= text_field_tag :q, nil, size: 17, placeholder: 'Search here...' %>
+                <% end %></div>
+
         </div>
     </div>
 </nav> <!--/navbar-->
+</div>
+
+
