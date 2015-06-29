@@ -3,7 +3,7 @@ FactoryGirl.define do
     name { SecureRandom.hex }
     description { SecureRandom.hex }
     image_url { "#{SecureRandom.hex}.jpg" }
-    key SecureRandom.hex
+    key { SecureRandom.hex }
     price 10 
   end		
 end
