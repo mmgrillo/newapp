@@ -56,7 +56,7 @@ end
 #
 #
 # describe User do
-# 	user = User.new(email: 'mail@mail.com', password: "1234567Cf")
+#   user = User.new(email: 'mail@mail.com', password: "1234567Cf")
 #
 #   it "is valid with a complex password" do
 #     user.should be_valid
@@ -88,7 +88,7 @@ end
 # #     user.invalid?
 #
 # #      it 'should invalidate user password' do
-# # 		   expect(user.errors[:password])
+# #        expect(user.errors[:password])
 # #      end
 # #   end
 #
