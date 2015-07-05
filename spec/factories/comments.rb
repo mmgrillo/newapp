@@ -4,4 +4,4 @@ FactoryGirl.define do
   	body { SecureRandom.hex }
   	association :user
   end	
-end	
+end
