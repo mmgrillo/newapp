@@ -31,3 +31,20 @@ describe "routing to products" do
   		)
   end
 end
+
+describe ProductsController, "create a new product" do
+
+  describe "POST create" do
+    it "should redirect to @product on succesful save" do
+      subject { build(:product) }
+      response.should redirect_to(@product)
+    end
+  end
+
+    it "should render a new template on a failed save" do
+       subject { build(:product) }
+      response.should redirect_to(@product)
+    end
+
+end
+

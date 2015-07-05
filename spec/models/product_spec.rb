@@ -63,7 +63,6 @@ describe Product do
     end  
   end  
  
-
    describe Product, 'validation' do
     it { should validate_uniqueness_of(:key) }
     it { should validate_uniqueness_of(:name) }

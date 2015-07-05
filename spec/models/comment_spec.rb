@@ -26,3 +26,8 @@ require "rails_helper"
     it { should belong_to(:user) }
     it { should belong_to(:product) }
   end
+
+  describe Comment do
+    it { should belong_to (:product) }
+    it { should belong_to (:user) }
+  end 
