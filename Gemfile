@@ -43,6 +43,10 @@ end
 
 group :development do
 	gem 'mailcatcher'
+  gem 'guard'
+  gem 'guard-rspec', require: false
+  gem 'spork-rails'
+  gem 'guard-spork'
 end	
 
 group :development, :test do
