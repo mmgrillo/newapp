@@ -24,6 +24,13 @@
   <%= @product.price %>
 </p>
 
+<div class="text-center">
+<%= form_tag "/payments/create" do %>
+  <%= render partial: "shared/stripe_checkout_button" %>
+<% end %>
+</div>
+
+<p></p>
 <p class="text-center" style="color:white">
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
