@@ -64,6 +64,7 @@ describe Product do
   end  
  
    describe Product, 'validation' do
+    subject { build(:product) }
     it { should validate_uniqueness_of(:key) }
     it { should validate_uniqueness_of(:name) }
     it { should validate_presence_of(:key) }
