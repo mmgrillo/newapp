@@ -36,6 +36,7 @@ gem 'will_paginate', '~> 3.0.5'
 # gem 'capistrano-rails', group: :development
  
 gem 'pg'
+gem 'stripe'
 
 group :production do
 	gem 'rails_12factor'
@@ -47,7 +48,6 @@ group :development do
   gem 'guard-rspec', require: false
   gem 'spork-rails'
   gem 'guard-spork'
-  gem 'stripe'
 end	
 
 group :development, :test do
