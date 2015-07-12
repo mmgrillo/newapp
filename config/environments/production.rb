@@ -11,7 +11,10 @@ Rails.application.configure do
   :domain         => 'heroku.com',
   :enable_starttls_auto => true
 }
-
+  
+  config.action_mailer.default_url_options   = { :host => "monte-defesa.herokuapp.com", 
+                                                 :protocol => "https",       
+                                                 :only_path => false }
 
   # Code is not reloaded between requests.
   config.cache_classes = true
