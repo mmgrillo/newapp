@@ -15,4 +15,7 @@ class Product < ActiveRecord::Base
   	comments.average(:rating).to_f
   end
 
+  def price_in_cents
+    (price * 100).to_i
+  end	
 end
