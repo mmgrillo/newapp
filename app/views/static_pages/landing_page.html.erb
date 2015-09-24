@@ -17,13 +17,14 @@
 
  <div class="container container-story">
   <div class="row" id="product-images">
-    <div class="col-sm-12 col-md-4">
-      <a id="single_1" href="/images/AngusRacao1000x500.jpg" title="Pasto">
-  <img src="images/AngusRacao400x200.jpg" alt="" />
-</a>
-
-<%= link_to image_tag("/images/AngusRacao400x200.jpg"), :id => 'single_1' %>
-
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <%= link_to image_tag("/images/Erva cortada1000x500.jpg", width: 400, height: 200), "/images/Erva cortada1000x500.jpg", :class => 'fancybox' %>
+   </div>
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <%= link_to image_tag("/images/AngusRacao1000x500.jpg", width: 400, height: 200), "/images/AngusRacao1000x500.jpg", :class => 'fancybox' %>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <%= link_to image_tag("/images/JoaoHelder1000x500.jpg", width: 400, height: 200), "/images/JoaoHelder1000x500.jpg", :class => 'fancybox' %>
     </div>
   </div>
  </div>

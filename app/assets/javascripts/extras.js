@@ -33,6 +33,15 @@ $(window).bind('scroll', function () {
 });
 
 $(window).bind('scroll', function () {
+    if ($(window).scrollTop() > 65) {
+        $('.fixedlogo').show();
+    } else {
+        $('.fixedlogo').hide();
+    }
+});
+
+
+$(window).bind('scroll', function () {
     if ($(window).scrollTop() < 65) {
         $('.nav').css("margin-top", "3em");
     } else {
@@ -41,12 +50,9 @@ $(window).bind('scroll', function () {
 });
 
 $(document).ready(function() {
-    $("#single_1").fancybox({
-          helpers: {
-              title : {
-                  type : 'float'
-              }
-          }
-      });
+  $("a.fancybox").fancybox();
+});
+
+
 
 

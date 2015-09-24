@@ -110,6 +110,11 @@ $primary-color: #97ac9e;
 	z-index: 1;	
 }
 
+.fixedlogo {
+	padding-left: 2em;
+	padding-top: 0.5em;
+}
+
 #entry-text {
 	color: black;
 	font-weight: 900;
@@ -117,7 +122,7 @@ $primary-color: #97ac9e;
 }
 
 #fixed-menu-logo {
-	z-index: -1000px;
+	background-color: red;
 }
 
 #startnav {
