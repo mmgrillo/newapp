@@ -39,3 +39,14 @@ $(window).bind('scroll', function () {
         $('.nav').css("margin-top", "0px");
     }
 });
+
+$(document).ready(function() {
+    $("#single_1").fancybox({
+          helpers: {
+              title : {
+                  type : 'float'
+              }
+          }
+      });
+
+
