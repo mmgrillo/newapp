@@ -26,6 +26,7 @@
 
 <div class="text-center">
 <%= form_tag "/payments/create" do %>
+<%= hidden_field_tag :id, @product.id %>
   <%= render partial: "shared/stripe_checkout_button" %>
 <% end %>
 </div>
