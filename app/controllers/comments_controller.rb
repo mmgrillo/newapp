@@ -20,8 +20,14 @@ class CommentsController < ApplicationController
   def destroy
     authorize! :destroy, @comment
     @comment.destroy
-    redirect_to products_url
+    
+    respond_to do |format|
+      format.html {redirect_to @comment}
+      format.json {head :no_content}
+      format.js { render :layout => false }
+    end
   end
+
 
   private
 
