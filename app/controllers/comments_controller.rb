@@ -22,7 +22,7 @@ class CommentsController < ApplicationController
     @comment.destroy
     
     respond_to do |format|
-      format.html {redirect_to @comment}
+      format.html {redirect_to @product}
       format.json {head :no_content}
       format.js { render :layout => false }
     end
