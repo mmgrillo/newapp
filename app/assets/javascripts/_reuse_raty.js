@@ -1,6 +1,6 @@
 
 
-$.fn.reuse_raty = function() {
+/*$.fn.reuse_raty = function() {
 
 	$(document).on('ready page:load', function(){
 			$('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
@@ -12,7 +12,7 @@ $.fn.reuse_raty = function() {
 		    });
 		});
 
-});
+});*/
 
 
 

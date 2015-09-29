@@ -21,11 +21,14 @@ class CommentsController < ApplicationController
     authorize! :destroy, @comment
     @comment.destroy
     
-    respond_to do |format|
-      format.html {redirect_to @product}
-      format.json {head :no_content}
-      format.js { render :layout => false }
-    end
+    #respond_to do |format|
+      #format.html {redirect_to @product}
+      #format.json {head :no_content}
+      #format.js { render :layout => false }
+      #format.js { render layout: false } # sends only a response that has a header with status 200/ok
+    #end
+    #render layout: false
+    head :ok
   end
 
 
