@@ -1,0 +1,79 @@
+<html ng-app>
+  <head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+  </head>
+
+<body>
+<div class= "yield-pages">
+
+	<div class="row">
+  	<h1 class="text-center" style="margin-bottom:40px" id="new-product-title">New Product</h1>
+
+		<div class="col-sm-12 col-md-6">
+			<div class="field">
+				<input type="text" ng-model="productName" placeholder="Enter product name here">
+      </div>
+		  <div class="field">
+		  	<input type="text" ng-model="description" placeholder="Enter a description here">
+		  </div>
+		  <div class="field">
+		  	<input type="url" ng-model="url.text" placeholder="Enter url here">
+		  </div>
+		  <div class="field">
+		  	<input type="number" ng-model="productKey" placeholder="Enter a product key here">
+		  </div>
+		    <div class="field">
+		    	<input type="number" ng-model="price" placeholder="Enter price here">
+		  </div>
+		  <div class="actions text-center">
+		    <button type="button" class="btn btn-primary">CreateProduct</button>
+		  </div>
+
+		</div>
+		
+		<div class="col-sm-12 col-md-6">			
+
+			<div class="container containerdevise" style="margin-top: 0px">
+
+			  <h3 class="text-center loginstuff" style="color:white">{{productName | uppercase}}</h3>
+
+
+			<p ng-show="description" class="text-center" style="color:white">
+			  <strong>Description:</strong>
+			  {{description}}
+			</p>
+
+			<p class="text-center" style="color:white">
+					image width: 200, height: 120
+					{{url.text}}
+			</p>
+
+			<p class="text-center" style="color:white">
+			  <strong>Product Key:</strong>
+			    {{productKey}}
+			</p>
+
+			<p class="text-center" style="color:white"> 
+			  <strong>Product Price: €</strong>
+			    {{price}}
+			</p>
+
+	</div>
+</div>
+</div>
+</div>
+
+		 <script type="text/javascript">
+		function ContactController($scope) {
+    $scope.contacts = ["viralpatel.net@gmail.com", "hello@email.com"];
+    
+    $scope.add = function() {
+        $scope.contacts.push($scope.newcontact);
+		$scope.newcontact = "";
+        }
+    }
+		</script>
+
+</body>
+</html>
+		
