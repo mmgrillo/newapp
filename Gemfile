@@ -51,6 +51,7 @@ group :development do
   gem 'spork-rails'
   gem 'guard-spork'
   gem 'brakeman', :require => false
+  gem 'dalli'
 end	
 
 group :development, :test do
