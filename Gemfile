@@ -39,6 +39,7 @@ gem 'will_paginate', '~> 3.0.5'
  
 gem 'pg'
 gem 'stripe'
+gem 'dalli'
 
 group :production do
 	gem 'rails_12factor'
@@ -51,7 +52,6 @@ group :development do
   gem 'spork-rails'
   gem 'guard-spork'
   gem 'brakeman', :require => false
-  gem 'dalli'
 end	
 
 group :development, :test do
