@@ -40,6 +40,7 @@ gem 'will_paginate', '~> 3.0.5'
 gem 'pg'
 gem 'stripe'
 gem 'dalli'
+gem 'redis-rails'
 
 group :production do
 	gem 'rails_12factor'
