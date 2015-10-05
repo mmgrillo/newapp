@@ -1,9 +1,11 @@
 class StaticPagesController < ApplicationController
+  helper ProductsHelper
+
   def index
   end
   
   def landing_page
-    @products = Product.limit(3)
+    @products = Product.limit(6)
   end
   
 

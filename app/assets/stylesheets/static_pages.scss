@@ -5,6 +5,25 @@
 
 $primary-color: #97ac9e;
 
+#table-title {
+	padding-top: 2em;
+	color: $primary-color;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table, tr, th, td {
+	border: 2px solid $primary-color;
+	background-color: grey;
+	color: white;
+}
+
+td, th {
+	padding: 1em;
+}
+
 h1 {
 	font-family: Garamond, sans-serif;
 	text-alignment: center;

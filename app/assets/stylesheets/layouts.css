@@ -19,9 +19,9 @@
 }
 
 .white-space {
-	height: 350px;
 	position: relative;
 	margin-top: 40px;
+	margin-bottom: 3em;
 }
 
 #landingbanner p {
