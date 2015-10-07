@@ -1,4 +1,6 @@
 
 <div class="row">
-    <p id="thank-you">Thank you. We have received your message and will respond as soon as possible.</p>
+    <p id="thank-you">Thank you <%= @name %>. We have received your message and will respond as soon as possible.</p>
+    <p>For your record, the message that you have sent to us is:</p>
+    <p><%= @message %></p>
 </div>
