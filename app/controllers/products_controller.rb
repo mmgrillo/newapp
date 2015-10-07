@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
 
   # GET /products
   # GET /products.json
-  before_filter :authenticate_user!
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     if params[:q]
@@ -18,7 +18,6 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @comments = @product.comments.all.order("created_at DESC").page(params[:page]).per_page(5)
-    @product = Product.find params[:id]
     $redis.incr "#{Date.today.year}:#{Date.today.month}:#{Date.today.day}:products:#{@product.id}:views"
     $redis.sadd "#{Date.today.year}:#{Date.today.month}:#{Date.today.day}:products:#{@product.id}:uniques", request.remote_ip
   end

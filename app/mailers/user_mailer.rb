@@ -5,12 +5,7 @@ class UserMailer < ApplicationMailer
 		@name = name
 		mail(:to => email,
 				 :subject => "Thanks for contacting us")
-	end
-
-	def welcome_email(user)
-		@user = user
-		@url = "/sign_up"
-		mail(to: @user.email, subject: "Thanks for registering.")
+		# ActionMailer::Base.mail(:to => email, :subject => "Thansk.....")
 	end
 
 end
