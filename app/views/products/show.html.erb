@@ -1,13 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container containerdevise">
+<div class="container containerdevse">
+  <h3 class="text-center loginstuff" style="color:white"><%= @product.name %><  /h==3>
 
-  <h3 class="text-center loginstuff" style="color:white"><%= @product.name %></h3>
-
-
-<p class="text-center" style="color:white">
+= 
+p class="text-center" style="color:white"
   <strong>Description:</strong>
-  <%= @product.description %>
+ #<%= @product.description %>
 </p>
 
 <p class="text-center" style="color:white">
@@ -26,9 +25,10 @@
 
 <div class="text-center">
 <%= form_tag "/payments/create" do %>
-<%= hidden_field_tag :id, @product.id %>
+  <%= hidden_field_tag :id, @product.id %>
   <%= render partial: "shared/stripe_checkout_button" %>
 <% end %>
+  <%# link_to "Purchase", "#", class: 'btn btn-primary', id: 'product-purchase-button' %>
 </div>
 
 <p></p>
@@ -44,3 +44,28 @@
 <%= render "products/product_reviews" %>
 <p> <%= will_paginate @comments %></p>
 </div>
+
+
+<div class="modal fade" id="product-purchase-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Product Purchase</h4>
+      </div>
+      <div class="modal-body">
+        <%= form_tag "/payments/create" do %>
+          <%= text_field_tag :first_name, nil, placeholder: "Your first name", class: 'form-control' %>
+
+          <% # add your extra fields here according to Stripe documentation %>
+
+          <%= submit_tag "Purchase" %>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

@@ -17,6 +17,14 @@ $(document).ready(function(){
 		$(this).closest('div').fadeOut();
 	});
 
+	$('#product-purchase-button').on('click', function(event, data) {
+		// 1. open the modal
+		$('#product-purchase-modal').modal('show');
+
+		return false;
+
+	});
+
 });
 
 

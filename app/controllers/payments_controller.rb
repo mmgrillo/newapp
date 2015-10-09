@@ -1,6 +1,16 @@
 class PaymentsController < ApplicationController
-  
+    
   def create
+    #if current_user
+      # signed in user
+    #else
+      # non-signed in user
+      # 1. user needs to be presented with the page to sign in
+      #    If the user does not have an account, he will chose to sign up,
+      #    and then sign in automatically.
+      # 2.   
+    #end
+
     token = params[:stripeToken]
     @product = Product.find(params[:id])
 
@@ -10,10 +20,17 @@ class PaymentsController < ApplicationController
         :amount => @product.price_in_cents,
         :currency => "eur",
         :source => token,
-        :description => current_user.email # params[:stripeEmail]
+        :description => current_user.present? ? current_user.email : params[:stripeEmail],
+        :metadata => {
+          :product_name => @product.name
+        }
       )
 
-      Order.create! product: @product, user: current_user
+      if current_user
+        Order.create! product: @product, user: current_user
+      else
+        UserMailer.send_confirmation_to_guest(@product.id, params[:stripeEmail]).deliver 
+      end  
 
     rescue Stripe::CardError => e
       # The card has been declined

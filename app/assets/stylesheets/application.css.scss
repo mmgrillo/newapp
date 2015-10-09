@@ -10,18 +10,21 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
- *= require fancybox
- *= require_navbar
- *= require_products
- *= require_contacts
- *= require_users
- *= require_devise
- *= require_layouts
-
- */
-
+*/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap/theme";
+@import "jquery.raty";
+@import "fancybox";
+@import "navbar";
+@import "products";
+@import "contacts";
+@import "users";
+@import "devise";
+@import "layouts";
+@import "comments";
+@import "payments";
+@import "static_pages";
 
 .welcome {
 	margin-top: 80px;
