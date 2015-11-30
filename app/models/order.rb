@@ -2,7 +2,7 @@ class Order < ActiveRecord::Base
 	belongs_to :product
 	belongs_to :user
 
-	after_create :send_confirmation_email
+	#after_create :send_confirmation_email
 
 	private
 

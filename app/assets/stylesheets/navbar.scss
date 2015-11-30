@@ -7,6 +7,7 @@ $primary-color: #97ac9e;
 .navbar-inverse {
 	background-color: transparent;
 	border-color: transparent;
+	background-image: none;
 }
 
 .navbar .nav > li > a {
@@ -54,10 +55,9 @@ $primary-color: #97ac9e;
 
 #top_buttons {
 	width: 170px;
-	height: 40px;
-	margin-right: 70px;
-	float: right;
-	margin-top: -45px;
+  margin-right: 190px;
+  float: right;
+  margin-top: -41px;
 }
 
 #top_buttons li {

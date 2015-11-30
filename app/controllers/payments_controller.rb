@@ -26,11 +26,11 @@ class PaymentsController < ApplicationController
         }
       )
 
-      if current_user
+      #if current_user
         Order.create! product: @product, user: current_user
-      else
-        UserMailer.send_confirmation_to_guest(@product.id, params[:stripeEmail]).deliver 
-      end  
+      #else
+       # UserMailer.send_confirmation_to_guest(@product.id, params[:stripeEmail]).deliver 
+      #end  
 
     rescue Stripe::CardError => e
       # The card has been declined

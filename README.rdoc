@@ -1,3 +1,5 @@
 == README
 
 My name is Manuel, and I´m enjoying programming. But is it too late?
+
+git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
