@@ -6,7 +6,7 @@ ruby "2.2.0"
 gem 'rails', '4.2.2'
 
 # Use SCSS for stylesheets
-#gem 'bootstrap-sass'
+gem 'bootstrap-sass'
 
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
