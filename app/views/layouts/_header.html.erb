@@ -37,7 +37,7 @@
             <li> <%= link_to('LOGIN', new_user_session_path, class: "menutext") %></li>
           <% end %>
           </ul>
-          <div id="fixed-logo"><%= link_to image_tag('/images/defesa-logo-fixed.png', class:"fixedlogo"), root_path %></div>
+          <div><%= link_to image_tag('/images/defesa-logo-fixed.png', class:"fixedlogo"), root_path %></div>
 
           <div id="search-box"><%= form_tag("/products", method: "get") do %>
                 <%= text_field_tag :q, nil, size: 17, placeholder: 'Search here...' %>
