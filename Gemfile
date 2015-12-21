@@ -43,6 +43,7 @@ gem 'pg'
 gem 'stripe'
 gem 'dalli'
 gem 'redis-rails'
+gem 'angularjs-rails'
 
 group :production do
 	gem 'rails_12factor'

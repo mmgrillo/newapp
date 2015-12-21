@@ -16,6 +16,7 @@
 //= require fancybox
 //= require turbolinks
 //= require extras
+//= require angular
 //= require_tree .
 
 
